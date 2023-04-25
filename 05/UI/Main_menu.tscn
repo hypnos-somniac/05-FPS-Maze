@@ -1,0 +1,31 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://UI/Main_menu.gd" type="Script" id=1]
+
+[node name="Main_menu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.105882, 0.121569, 0.235294, 1 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 406.0
+margin_top = 201.0
+margin_right = 606.0
+margin_bottom = 251.0
+text = "3D Maze FPS
+"
+align = 1
+
+[node name="Single_player" type="Button" parent="."]
+margin_left = 409.0
+margin_top = 261.0
+margin_right = 609.0
+margin_bottom = 311.0
+text = "Single-player Game"
+
+[connection signal="pressed" from="Single_player" to="." method="_on_Single_player_pressed"]
